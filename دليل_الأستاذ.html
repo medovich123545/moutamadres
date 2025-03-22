@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس، مع روابط لتحميل الموارد التعليمية والمناهج الدراسية.">
+  <meta name="keywords" content="دلائل الأستاذ, تعليم ابتدائي, موارد تعليمية, مناهج دراسية, تعليم فعّال">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="دلائل الأستاذ : خارطة طريق للتعليم الفعال">
+  <meta property="og:description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.">
+  <meta property="og:image" content="path_to_image.png"> <!-- Ajouter l'URL de l'image -->
+  <meta property="og:url" content="https://www.votre-url.com">
+  
+  <meta name="twitter:title" content="دلائل الأستاذ : خارطة طريق للتعليم الفعال">
+  <meta name="twitter:description" content="جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.">
+  <meta name="twitter:image" content="path_to_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>دلائل الأستاذ لجميع المستويات الدراسية - موقع الوثيقة التربوية</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+/* Global Styles */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2e3b4e, #3b4f7f); /* Couleurs ajustées */
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #0d2023;
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(65, 49, 49, 0.2);
+}
+
+.header-title {
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.header-description {
+  font-size: 15px;
+  color: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Conteneur principal */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Style des boutons des niveaux */
+.level-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.level {
+  background: #0d2023;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.level:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.level button {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Ajustement du gradient pour le bouton */
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.level button:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72); /* Changement du gradient au survol */
+  transform: scale(1.08);
+}
+
+/* Bouton flottant */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #ff9800;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-button:hover {
+  background: #e68900;
+  transform: scale(1.1);
+}
+
+.floating-button i {
+  font-size: 24px;
+}
+
+/* Logo flottant */
+.floating-logo {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-logo img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: #d1ecf1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .floating-logo {
+    display: none;
+  }
+
+  .header-description {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .level-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .level {
+    width: 90%;
+  }
+
+  .level button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .floating-button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title"><h1>دلائل الأستاذ : خارطة طريق للتعليم الفعال</h1></div>
+    <div class="header-description">
+      <p>جميع دلائل أستاذ التعليم الابتدائي حسب المستوى المدرس.</p>
+    </div>
+  </header>
+  
+  <!-- Logo flottant -->
+  <div class="floating-logo">
+    <img src="images/icon5.png" alt="شعار الموقع">
+  </div>
+  <div class="content">
+    <div class="level-container">
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-الأول-ابتدائي.html'">المستوى الأول</button>
+      </div>
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-الثاني-ابتدائي.html'">المستوى الثاني</button>
+      </div>
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-الثالث-ابتدائي.html'">المستوى الثالث</button>
+      </div>
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-الرابع-ابتدائي.html'">المستوى الرابع</button>
+      </div>
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-الخامس-ابتدائي.html'">المستوى الخامس</button>
+      </div>
+      <div class="level">
+        <button onclick="window.location.href='دليل-الأستاذ-المستوى-السادس-ابتدائي.html'">المستوى السادس</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Bouton flottant -->
+  <div class="floating-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة لـموقع  متمدرس التربوي 2014-2030
+  </footer>
+</body>
+</html>

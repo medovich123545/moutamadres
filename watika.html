@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> كنز الوثائق التربوية</title>
+    <style>
+        body {
+            font-family: "Cairo", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            direction: rtl;
+        }
+        header {
+            background: linear-gradient(90deg, #002b5c, #00509e);
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px;
+        }
+        .section {
+            background-color: #ffffff;
+            margin: 15px;
+            padding: 25px;
+            border-radius: 12px;
+            width: 30%;
+            min-width: 320px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+        .section h3 {
+            border-bottom: 3px solid #00509e;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #00509e;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .section ul li button {
+            background: linear-gradient(90deg, #004080, #00509e);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .section ul li button:hover {
+            background: linear-gradient(90deg, #00509e, #0066cc);
+            transform: scale(1.05);
+        }
+        footer {
+            background: #002b5c;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: white;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        موقعي وثيقتي
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h3>أقسام التعليم الابتدائي</h3>
+            <ul>
+                <li><button>التقويم التشخيصي</button></li>
+                <li><button>المستوى الأول</button></li>
+                <li><button>المستوى الثاني</button></li>
+                <li><button>المستوى الثالث</button></li>
+                <li><button>المستوى الرابع</button></li>
+                <li><button>المستوى الخامس</button></li>
+                <li><button>المستوى السادس</button></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>أقسام مميزة إضافية</h3>
+            <ul>
+                <li><button>استطلاعات رقمية</button></li>
+                <li><button>أفكار عملية</button></li>
+                <li><button>أنشطة مدمجة</button></li>
+                <li><button>بحوث تربوية</button></li>
+                <li><button>بطاقات تربوية</button></li>
+                <li><button>عروض تربوية</button></li>
+                <li><button>مراسلات ومذكرات</button></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>مواقع مهمة لكل أستاذ</h3>
+            <ul>
+                <li><button>تتبع ملفات تعويضات الكنوبس</button></li>
+                <li><button>الخزينة العامة للمملكة</button></li>
+                <li><button>بوابة تكنولوجيا المعلومات والاتصال</button></li>
+                <li><button>الاطلاع على الوضعية الإدارية</button></li>
+                <li><button>تعديل الفن السنوي للوائح مسار</button></li>
+                <li><button>وزارة التربية الوطنية</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة لـموقع الوثيقة التربوية    &copy; 2030
+    </footer>
+</body>
+</html>

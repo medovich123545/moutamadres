@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن - كنز الوثائق التربوية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Réinitialisation globale */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --primary-color: #102a2d;
+      --secondary-color: #0d2023;
+      --accent-color: #ecc94b;
+      --text-color: #e1e1e1;
+      --base-font-size: 16px;
+    }
+    
+    html {
+      font-size: var(--base-font-size);
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 80px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Réordonner pour une meilleure intégration dans l'app bar */
+    .logo {
+      order: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 250px;
+      width: auto;
+      max-width: 100%;
+    }
+    
+    nav {
+      order: 2;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li a {
+      color: var(--text-color);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hamburger {
+      order: 3;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px 0;
+    }
+    
+    .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  z-index: 1001; /* z-index augmenté pour passer devant l'en-tête */
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+    
+    .mobile-menu.active {
+      right: 0;
+    }
+    
+    .mobile-menu .close-btn {
+      font-size: 2rem;
+      color: var(--text-color);
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu ul {
+      list-style: none;
+      padding: 4rem 0 0 0;
+      margin: 0;
+    }
+    
+    .mobile-menu ul li {
+      margin-bottom: 1rem;
+    }
+    
+    .mobile-menu ul li a {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 0.5rem 0.8rem;
+      display: block;
+      border-radius: 3px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+    
+    .hero {
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px;
+      padding: 2rem 1rem;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16, 42, 45, 0.5);
+    }
+    
+    .hero .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+      margin: 1rem 0;
+      word-wrap: break-word;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section {
+      padding: 4rem 2rem;
+      background-color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .content-section:nth-of-type(even) {
+      background-color: var(--secondary-color);
+    }
+    
+    .content-section .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: justify;
+      word-wrap: break-word;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    footer {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-color);
+      font-size: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    
+    /* Ajustements pour la version mobile */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    
+      header {
+        padding: 0 1rem;
+        height: 60px;
+      }
+    
+      .logo img {
+        height: 150px;
+      }
+    
+      nav ul {
+        display: none;
+      }
+    
+      .hamburger {
+        display: flex;
+      }
+    
+      .hero {
+        margin-top: 60px;
+        padding: 1rem;
+        height: auto;
+      }
+    
+      .hero .hero-content {
+        padding: 1rem;
+      }
+    
+      .hero h1 {
+        font-size: 2rem;
+      }
+    
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    
+      .hero p {
+        font-size: 1rem;
+      }
+    
+      .content-section {
+        padding: 2rem 1rem;
+      }
+    
+      .content-section h2 {
+        font-size: 2rem;
+      }
+    
+      .content-section p {
+        font-size: 1rem;
+      }
+      
+      .mobile-menu {
+        width: 80%;
+        padding: 1.5rem;
+      }
+    
+      .mobile-menu ul {
+        padding: 3rem 0 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="logo">
+      <img src="images/icon5.png" alt="شعار الموقع">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html" class="active">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMobileMenu(event)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" onclick="toggleMobileMenu(event)">&times;</div>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html" class="active">من نحن</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+  </div>
+
+  <!-- Sections de contenu -->
+  <section class="content-section">
+    <div class="content">
+      <h2>قصتنا</h2>
+      <p>
+        بدأت رحلتنا منذ أكثر من عقد من الزمن بهدف تمكين المعلمين وتزويدهم بالأدوات والوثائق التي تسهم في تحسين العملية التعليمية. من خلال العمل الدؤوب والتزامنا بالجودة، قمنا بتجميع مجموعة ضخمة من الوثائق التي تغطي جميع الجوانب التربوية والإدارية. 
+        بفضل فريق متفاني من الخبراء والمختصين، استطعنا أن نكون في طليعة الحلول التعليمية التي تعتمد على الابتكار والتكنولوجيا الحديثة. قصتنا هي قصة شغف بالتعلم والرغبة في إحداث تغيير إيجابي ملموس يؤثر على المدارس والمجتمع بأكمله.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content">
+      <h2>قيمنا</h2>
+      <p>
+        نؤمن أن الابتكار والاحترافية هما المفتاح لتقديم خدمة متميزة في مجال التعليم. قيمنا تتجسد في الالتزام بالجودة، النزاهة، والتفاني في تقديم أفضل الحلول للمعلمين والمؤسسات التعليمية. نسعى دائمًا إلى تحقيق التوازن بين التطور التكنولوجي والتقليدي، مما يجعلنا نركز على الحلول العملية التي تُحدث فرقًا حقيقيًا.
+        هذه القيم ليست مجرد شعارات، بل هي المبادئ التي توجه كل خطوة نخطوها في رحلتنا نحو تحسين العملية التعليمية وخدمة المجتمع.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content">
+      <h2>رؤيتنا</h2>
+      <p>
+        تطمح رؤيتنا إلى أن نصبح الشريك الاستراتيجي الأول للمعلمين والمؤسسات التعليمية في العالم العربي. نحن نسعى لتوسيع خدماتنا عالميًا مع الحفاظ على جودة عالية وابتكار مستمر في كل ما نقدمه. رؤيتنا تتجاوز مجرد تقديم الوثائق؛ إنها رؤية متكاملة تهدف إلى خلق بيئة تعليمية متطورة تعتمد على التكنولوجيا والابتكار لتعزيز فرص التعلم وتحقيق النجاح لكل فرد.
+        نحن نطمح إلى مستقبل يكون فيه التعليم أكثر سهولة، وصولاً، وفعالية بفضل الحلول الذكية التي نوفرها.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>حقوق النشر &copy; جميع الحقوق محفوظة لـموقع الوثيقة التربوية 2014-2030.</p>
+  </footer>
+
+  <script>
+    // Fonction pour ouvrir/fermer le menu mobile
+    function toggleMobileMenu(event) {
+      event.stopPropagation();
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+    
+    // Fermer le menu mobile si l'utilisateur clique en dehors
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('active') && !menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

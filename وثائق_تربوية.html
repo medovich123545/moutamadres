@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستويات</title>
+  <!-- Meta description -->
+  <meta name="description" content="اكتشف جميع الوثائق التعليمية لجميع المستويات الدراسية، من التقويم التشخيصي إلى المراقبة المستمرة، مرتبة حسب المستوى الدراسي.">
+  
+  <!-- Meta keywords (optionnel mais peut être utile) -->
+  <meta name="keywords" content="المستويات الدراسية, وثائق تربوية, تقويم تشخيصي, استعمالات الزمن, توازيع سنوية, مراقبة مستمرة">
+  
+  <!-- Open Graph Meta Tags (pour l'affichage sur les réseaux sociaux) -->
+  <meta property="og:title" content="المستويات - موقع الوثيقة التربوية">
+  <meta property="og:description" content="اكتشف جميع الوثائق التعليمية لجميع المستويات الدراسية، من التقويم التشخيصي إلى المراقبة المستمرة، مرتبة حسب المستوى الدراسي.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/medovich123545/watiqa/main/images/prof.png"> <!-- Remplacez par l'URL de votre image -->
+  <meta property="og:url" content="https://github.com/medovich123545/watiqa/blob/main/choix.html"> <!-- Remplacez par l'URL exacte de la page -->
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:title" content="المستويات - موقع الوثيقة التربوية">
+  <meta name="twitter:description" content="اكتشف جميع الوثائق التعليمية لجميع المستويات الدراسية، من التقويم التشخيصي إلى المراقبة المستمرة، مرتبة حسب المستوى الدراسي.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/medovich123545/watiqa/main/images/prof.png"> <!-- Remplacez par l'URL de votre image -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #102a2d;
+      color: #e1e1e1;
+    }
+
+    header {
+      background: #0d2023;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #f0f8ff;
+    }
+
+    .header-description {
+      font-size: 18px;
+      color: 0 4px 10px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header-description p {
+      margin-top: 10px;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #0d2023;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .level-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .level {
+      background: #183c40;
+      border: 1px solid #a0c4c8;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .level:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .level button {
+      background: #183c40;
+      color: #a0c4c8;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .level button:hover {
+      background: #0d2023;
+      color: #e1e1e1;
+    }
+
+    .dropdown {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .dropdown a {
+      display: block;
+      background: #102a2d;
+      color: #a0c4c8;
+      padding: 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dropdown a:hover {
+      background: #183c40;
+      color: #e1e1e1;
+    }
+
+    footer {
+      background: #0d2023;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    /* Logo flottant */
+    .floating-logo {
+      position: fixed;
+      top: -5px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .floating-logo img {
+      height: 600px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .floating-logo {
+        bottom: 50px; /* Placer le logo en bas */
+        top: auto;    /* Annuler la position top */
+        right: 10px;  /* Garder la distance à droite */
+      }
+
+      .floating-logo img {
+        height: 150px; /* Réduire la taille du logo sur mobile */
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      .floating-logo {
+        top: 10px; /* Remonter le logo sur desktop */
+      }
+    }
+
+    .header-description {
+      font-size: 16px;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+
+    .level button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+
+    .floating-logo img {
+      height: 150px; /* Réduire la taille du logo sur mobile */
+    }
+
+    /* Amélioration de la position du logo pour la version desktop */
+    @media screen and (min-width: 769px) {
+      .floating-logo {
+        top: 10px; /* Remonter le logo sur desktop */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">وثائق وموارد تربوية لكل المستويات</div>
+    <div class="header-description">
+      تجد هنا جميع الوثائق التعليمية اللازمة من التقويم التشخيصي إلى المراقبة المستمرة، مرتبة حسب المستوى الدراسي.
+    </div>
+  </header>
+
+  <!-- Logo flottant -->
+  <div class="floating-logo">
+    <img src="images/icon5.png" alt="شعار الموقع">
+  </div>
+  <div class="content">
+    <div class="level-container">
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-الأول-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-الأول-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-الأول-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-الأول-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-الثاني-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-الثاني-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-الثاني-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-الثاني-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-الثالث-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-الثالث-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-الثالث-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-الثالث-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-الرابع-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-الرابع-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-الرابع-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-الرابع-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-الخامس-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-الخامس-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-الخامس-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-الخامس-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+      <div class="level">
+        <div class="dropdown">
+          <a href="تقويم-تشخيصي-المستوى-السادس-ابتدائي.html">تقويم تشخيصي</a>
+          <a href="استعمال-الزمن-المستوى-السادس-ابتدائي.html">استعمالات الزمن</a>
+          <a href="توزيع-سنوي-المستوى-السادس-ابتدائي.html">توازيع سنوية</a>
+          <a href="فروض-المستوى-السادس-ابتدائي.html">مراقبة مستمرة</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة لـموقع  متمدرس التربوي 2014-2030
+  </footer>
+</body>
+</html>
