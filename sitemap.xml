@@ -39,11 +39,7 @@
     <lastmod>2025-03-24</lastmod>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>http://moutamadres.ma/testa.html</loc>
-    <lastmod>2025-03-24</lastmod>
-    <priority>0.8</priority>
-  </url>
+ 
   <url>
     <loc>http://moutamadres.ma/watika.html</loc>
     <lastmod>2025-03-24</lastmod>
@@ -53,6 +49,12 @@
     <loc>http://moutamadres.ma/sitemap.xml</loc>
     <lastmod>2025-03-24</lastmod>
     <priority>0.5</priority>
+  </url>
+   <!-- Nouvelle page à venir : المدرسة الرائدة -->
+  <url>
+    <loc>http://moutamadres.ma/المدرسة-الرائدة.html</loc>
+    <lastmod>2025-03-24</lastmod>
+    <priority>0.8</priority>
   </url>
 
   <!-- Pages pédagogiques et documents en arabe -->
