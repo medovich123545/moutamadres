@@ -1,225 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="monetag" content="2868a4128ebba0d011fa05ae18dcf5e0">
-  <!-- Meta description bilingue -->
-  <meta name="description" content="    أرسنال وريال مدريد  بث مباشر .      diffusion en direct du retour." />
-  
-  <!-- Meta keywords bilingues -->
-  <meta name="keywords" content="أرسنال, ريال مدريد, دوري أبطال أوروبا, بث مباشر, مباراة العودة, Real Madrid vs Arsenal, live, retour, match en direct" />
-  
-  <!-- Titre bilingue -->
-  <title>أرسنال ضد ريال مدريد - Real Madrid vs Arsenal Live Retour | دوري أبطال أوروبا 2025</title>
-  
-  <!-- Liens alternatifs pour les versions de langue -->
-  <link rel="alternate" hreflang="ar" href="https://www.example.com/ar/real-madrid-vs-arsenal-live" />
-  <link rel="alternate" hreflang="fr" href="https://www.example.com/fr/real-madrid-vs-arsenal-live" />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Schema.org Article en bilingue -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "أرسنال ضد ريال مدريد - ملخص المباراة الأولى وتوقعات المباراة القادمة | Real Madrid vs Arsenal Live Retour",
-    "description": "ملخص المباراة الأولى بين أرسنال وريال مدريد مع بث مباشر وتحليلات للمباراة الثانية في دوري أبطال أوروبا. Résumé du premier match avec diffusion en direct du retour.",
-    "author": {
-      "@type": "Organization",
-      "name": "BeewaveTv"
-    },
-    "datePublished": "2025-04-16",
-    "image": "https://www.example.com/thumbs/arsenal-real-madrid.jpg",
-    "url": "https://www.example.com/ar/real-madrid-vs-arsenal-live",
-    "mainEntityOfPage": "https://www.example.com/ar/real-madrid-vs-arsenal-live"
-  }
-  </script>
-  
-  <!-- Schema.org SportsEvent en bilingue -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsEvent",
-    "name": "أرسنال ضد ريال مدريد - Real Madrid vs Arsenal",
-    "startDate": "2025-04-16T20:00:00+02:00",
-    "endDate": "2025-04-16T22:00:00+02:00",
-    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "VirtualLocation",
-      "url": "https://www.example.com/streaming-page"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://www.example.com/streaming-page",
-      "availability": "https://schema.org/InStock",
-      "price": "Gratuit",
-      "priceCurrency": "EUR"
-    },
-    "broadcastOfEvent": {
-      "@type": "BroadcastEvent",
-      "name": "Chaîne XYZ Sports",
-      "startDate": "2025-04-16T20:00:00+02:00",
-      "url": "https://www.example.com/streaming-page"
-    }
-  }
-  </script>
-  
-  <!-- Style personnalisé pour RTL -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع moutamadres.ma - موارد تعليمية ورابط النتائج المهنية</title>
+  <meta name="description" content="موقع moutamadres.ma يقدم موارد تعليمية وأدوات لإدارة القسم، بالإضافة إلى نتائج الامتحان المهني ومباريات التوجيه والتخطيط.">
+  <meta name="keywords" content="moutamadres, نتائج الامتحان المهني, مركز التوجيه والتخطيط, موارد المعلمين">
+
+  <!-- Publicité script -->
+  <script src="https://ligheechoagool.com/88/tag.min.js" data-zone="146636" async data-cfasync="false"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      direction: rtl;
-      text-align: right;
+    :root {
+      --primary: #0077b6;
+      --secondary: #023e8a;
+      --accent: #90e0ef;
+      --bg: #f1f5f9;
+      --text: #023047;
+      --white: #fff;
     }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Tajawal', sans-serif; background:var(--bg); color:var(--text); direction:rtl; display:flex; flex-direction:column; min-height:100vh; }
+    a { text-decoration:none; color:inherit; }
+    header { background:var(--secondary); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
+    .logo img { height:50px; }
+    nav ul { list-style:none; display:flex; gap:1rem; }
+    nav ul li a { color:var(--accent); font-weight:700; transition:color .3s; }
+    nav ul li a:hover { color:var(--white); }
+    .hamburger { display:none; flex-direction:column; gap:4px; cursor:pointer; }
+    .hamburger div { width:25px; height:3px; background:var(--text); }
+    @media(max-width:768px) { .hamburger { display:flex; } nav ul { display:none; } }
+    .mobile-menu { display:none; position:fixed; top:0; right:0; width:70%; height:100%; background:var(--secondary); padding:2rem; z-index:999; }
+    .mobile-menu.active { display:block; }
+    .mobile-menu ul { list-style:none; display:flex; flex-direction:column; gap:1rem; }
+    .hero { background:var(--primary); color:var(--white); text-align:center; padding:3rem 1rem; }
+    .hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+    .hero p { font-size:1.2rem; line-height:1.6; }
+    main { flex:1; max-width:900px; margin:2rem auto; background:var(--white); padding:2rem; border-radius:8px; }
+    footer { background:#e0e0e0; padding:1rem; text-align:center; }
+    .breaking-news { position:fixed; bottom:0; width:100%; background:#191f3b; height:45px; display:flex; align-items:center; overflow:hidden; }
+    .breaking-track { display:flex; animation:scroll-right 15s linear infinite; white-space:nowrap; }
+    .breaking-item { padding:0 1.5rem; color:#fff; font-weight:700; border-left:1px solid rgba(255,255,255,0.2); }
+    @keyframes scroll-right { 0%{ transform:translateX(-100%);} 100%{ transform:translateX(100%);} }
+    @media(max-width:768px) { .breaking-item { padding:0 1rem; font-size:.9rem; } }
   </style>
-  
-  <script>
-    // Fonction pour afficher la publicité popunder après un clic sur le bouton
-    function showPopunder() {
-      (function(s,u,z,p){
-        s.src = u;
-        s.setAttribute('data-zone', z);
-        p.appendChild(s);
-      })(document.createElement('script'), 'https://shebudriftaiter.net/tag.min.js', 9216398, document.body || document.documentElement);
-    }
-  </script>
 </head>
-<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+<body>
 
-  <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-6">
-    <div class="text-2xl font-bold text-yellow-400">Beewave<span class="text-white">TV</span></div>
-    <nav class="space-x-6 text-sm text-gray-300">
-      <a href="privacy.html" class="hover:text-yellow-400">سياسة الخصوصية</a>
-      <a href="#" class="hover:text-yellow-400">اتصل بنا</a>
-    </nav>
-  </header>
-
-  <!-- Section principale avec contenu en arabe -->
-  <main class="flex-grow flex items-center justify-center px-6">
-    <div class="flex flex-col gap-12 max-w-full w-full">
-      
-      <!-- Informations sur le match (texte en arabe uniquement) -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full">
-        <div class="text-center mb-6">
-          <h1 class="text-3xl font-extrabold text-yellow-400">⚽ أرسنال ضد ريال مدريد - ملخص المباراة</h1>
-        </div>
-
-        <section class="text-center">
-          <h2 class="text-2xl font-semibold mb-2">ملخص المباراة الأولى</h2>
-          <p class="text-gray-400 text-sm mb-4">
-            انتهت المباراة الأولى في ربع نهائي دوري أبطال أوروبا بين أرسنال وريال مدريد بفوز مثير لأرسنال بنتيجة 3-0. كان لاعب الوسط دكلان رايس بطل المباراة بتسجيله هدفين رائعين من ركلتي حرة في الشوط الثاني، بينما أضاف ميكيل ميرينو هدفًا ثالثًا لتعزيز تقدم فريقه.
-          </p>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">ردود الفعل قبل المباراة الثانية</h3>
-          <p class="text-gray-400">
-            يضع هذا النتيجة أرسنال في وضع جيد قبل المباراة الثانية في سانتياجو برنابيو. أعرب مدرب ريال مدريد، كارلو أنشيلوتي، ولاعب الوسط جود بيلينغهام عن عزمهما على تحقيق "ريمونتادا" بالاعتماد على تاريخ النادي.
-          </p>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">المباراة الثانية: التوقعات والتحليلات</h3>
-          <p class="text-gray-400 mb-4">
-            ستُقام المباراة الثانية في 16 أبريل 2025 في سانتياجو برنابيو، بعد فوز أرسنال 3-0 في المباراة الأولى. سيحتاج ريال مدريد إلى أداء استثنائي للتأهل.
-          </p>
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">توقعات الخبراء</h3>
-          <ul class="list-disc pl-6 text-gray-300">
-            <li>فوز ريال مدريد: تشير التقديرات إلى أن ريال مدريد لديه حوالي 57% فرصة للفوز.</li>
-            <li>سجل الفريقين أهدافًا: إمكانية تسجيل كلا الفريقين مع احتمالية تقدر بـ 1.57.</li>
-            <li>فوز ريال مدريد مع أقل من 3.5 أهداف: توصي بعض المواقع بهذا الرهان.</li>
-          </ul>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">التحليل التكتيكي المتوقع للمباراة الثانية</h3>
-          <p class="text-gray-400 mb-2">
-            سيعتمد ريال مدريد على نهج هجومي سريع لاستغلال الفرص، بينما يسعى أرسنال للحفاظ على تنظيم دفاعي متين.
-          </p>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">الإحصائيات الرئيسية</h3>
-          <ul class="list-disc pl-6 text-gray-300">
-            <li>تاريخ الانتفاضات: فقط 8% من الفرق التي خسرت بفارق ثلاثة أهداف تمكنت من التأهل.</li>
-            <li>الأداء على أرضه: خسر ريال مدريد 4 من آخر 24 مباراة على أرضه.</li>
-          </ul>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">الخاتمة والتوقعات</h3>
-          <p class="text-gray-400">
-            بالرغم من التوقعات بفوز ريال مدريد، يمثل قلب فارق الثلاثة أهداف تحديًا كبيرًا ويظل التأهل غير مؤكد.
-          </p>
-        </section>
-
-        <section class="mt-6">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-2">لتحليل أعمق</h3>
-          <p class="text-gray-400">
-            يمكنكم متابعة هذا الفيديو: 
-            <a href="https://www.youtube.com" target="_blank" class="text-yellow-400 underline">
-              التوقعات: هل يمكن لريال مدريد العودة في دوري أبطال أوروبا؟ | ESPN FC
-            </a>
-          </p>
-        </section>
-        
-        <!-- Bouton pour lancer le popunder (comme lancement vidéo بث مباشر) -->
-        <div class="text-center mt-8">
-          <button onclick="showPopunder()" class="bg-yellow-400 text-black px-6 py-3 rounded-lg text-lg font-bold hover:bg-yellow-500 transition shadow-lg">
-            ▶️ شاهد المباراة الآن - بث مباشر
-          </button>
-          <p class="text-sm text-gray-400 mt-2">
-            اضغط على الزر أعلاه لبدء البث المباشر وتشغيل المشغل 📺
-          </p>
-        </div>
-        
-      </div>
-
-      <!-- Liens supplémentaires -->
-      <aside class="space-y-4 w-full lg:w-64">
-        <a href="#" class="block bg-yellow-400 text-black text-center py-3 rounded-md font-semibold hover:bg-yellow-500 transition">📱 Google Play Store</a>
-        <a href="#" class="block bg-yellow-400 text-black text-center py-3 rounded-md font-semibold hover:bg-yellow-500 transition">📲 Huawei App Gallery</a>
-        <a href="#" class="block bg-yellow-400 text-black text-center py-3 rounded-md font-semibold hover:bg-yellow-500 transition">📦 APK (Google)</a>
-        <a href="#" class="block bg-yellow-400 text-black text-center py-3 rounded-md font-semibold hover:bg-yellow-500 transition">🔓 APK (بدون Google)</a>
-      </aside>
+<header>
+  <div class="logo">
+    <a href="/">
+      <img src="images/icon5.png" alt="شعار moutamadres.ma">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/">الرئيسية</a></li>
+      <li><a href="/services">الخدمات</a></li>
+      <li><a href="/results">النتائج</a></li>
+      <li><a href="/contact">اتصل بنا</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <div></div><div></div><div></div>
     </div>
-  </main>
-  
-  <!-- Script In-Page Push existant -->
-  <script>
-    (function(d,z,s){
-      s.src = 'https://'+d+'/400/'+z;
-      try { (document.body || document.documentElement).appendChild(s) } catch(e) {}
-    })('vemtoutcheeg.com', 9216492, document.createElement('script'));
-  </script>
-  
-  <!-- Script In-Page Push supplémentaire : Excited tag 9220358 -->
-  <script>
-    (function(d,z,s){
-      s.src = 'https://'+d+'/400/'+z;
-      try { (document.body || document.documentElement).appendChild(s) } catch(e) {}
-    })('vemtoutcheeg.com', 9220358, document.createElement('script'));
-  </script>
-  
-  <!-- Script Native Banner (Interstitial) : Particular tag 9220356 -->
-  <script>
-    (function(d,z,s){
-      s.src = 'https://'+d+'/401/'+z;
-      try { (document.body || document.documentElement).appendChild(s) } catch(e) {}
-    })('groleegni.net', 9220356, document.createElement('script'));
-  </script>
-  
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-400 py-6">
-    للمزيد من المعلومات، يمكنك الرجوع إلى 
-    <a href="#" class="text-yellow-400 underline">الشروط والأحكام</a> 
-    و 
-    <a href="#" class="text-yellow-400 underline">سياسة الخصوصية</a>.<br />
-    © 2025 BeewaveTv. جميع الحقوق محفوظة.
-  </footer>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="/">الرئيسية</a></li>
+    <li><a href="/services">الخدمات</a></li>
+    <li><a href="/results">النتائج</a></li>
+    <li><a href="/contact">اتصل بنا</a></li>
+  </ul>
+</div>
+
+<section class="hero">
+  <h1>moutamadres.ma</h1>
+  <p>مصدر شامل للوثائق التربوية ونتائج الامتحانات المهنية ومباريات الدخول إلى مراكز التوجيه والتخطيط.</p>
+</section>
+
+<main>
+  <!-- المحتوى الرئيسي -->
+</main>
+
+<!-- Bande déroulante breaking news -->
+<div class="breaking-news">
+  <div class="breaking-track">
+    <a href="نتائج_الامتحان_المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025</a>
+    <a href="مباراة_التوجيه_والتخطيط.html" class="breaking-item">📚 مباراة مركز التوجيه والتخطيط التربوي</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 moutamadres.ma - جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
