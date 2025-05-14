@@ -1,108 +1,229 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع moutamadres.ma - موارد تعليمية ورابط النتائج المهنية</title>
-  <meta name="description" content="موقع moutamadres.ma يقدم موارد تعليمية وأدوات لإدارة القسم، بالإضافة إلى نتائج الامتحان المهني ومباريات التوجيه والتخطيط.">
-  <meta name="keywords" content="moutamadres, نتائج الامتحان المهني, مركز التوجيه والتخطيط, موارد المعلمين">
 
-  <!-- Publicité script -->
-  <script src="https://ligheechoagool.com/88/tag.min.js" data-zone="146636" async data-cfasync="false"></script>
+  <!-- SEO Meta tags -->
+  <title>Bac 2025 – Préparation Complète et Conseils</title>
+  <meta name="description" content="Guide ultime pour réussir le Bac 2025 en France : dates, sujets probables, planning de révision, ressources et conseils pratiques.">
+  <meta name="keywords" content="Bac 2025, préparation bac, révisions terminale, sujets bac, conseils bac, épreuves bac">
+  <link rel="canonical" href="https://www.moutamadres.ma/france/bac-2025.html" />
+  <link rel="alternate" hreflang="fr-FR" href="https://www.moutamadres.ma/france/bac-2025.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bac 2025 – Préparation Complète et Conseils">
+  <meta property="og:description" content="Guide ultime pour réussir le Bac 2025 en France : dates, sujets probables, planning, ressources et conseils pratiques.">
+  <meta property="og:url" content="https://www.moutamadres.ma/france/bac-2025.html">
+  <meta property="og:image" content="https://www.moutamadres.ma/images/bac2025-banner.jpg">
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Moutamadres",
+    "url": "https://www.moutamadres.ma",
+    "logo": "https://www.moutamadres.ma/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR",
+      "addressLocality": "Paris"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Ressources exclusives Bac 2025",
+    "startDate": "2025-06-01",
+    "endDate": "2025-06-30",
+    "location": {
+      "@type": "Place",
+      "name": "Moutamadres",
+      "url": "https://www.moutamadres.ma"
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
+  <!-- Styles principaux -->
   <style>
     :root {
-      --primary: #0077b6;
-      --secondary: #023e8a;
-      --accent: #90e0ef;
-      --bg: #f1f5f9;
-      --text: #023047;
-      --white: #fff;
+      --primary-color: #2c3e50;
+      --accent-color: #f39c12;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+      --card-bg: #fff;
+      --spacing: 1rem;
+      --radius: 0.5rem;
     }
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Tajawal', sans-serif; background:var(--bg); color:var(--text); direction:rtl; display:flex; flex-direction:column; min-height:100vh; }
-    a { text-decoration:none; color:inherit; }
-    header { background:var(--secondary); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
-    .logo img { height:50px; }
-    nav ul { list-style:none; display:flex; gap:1rem; }
-    nav ul li a { color:var(--accent); font-weight:700; transition:color .3s; }
-    nav ul li a:hover { color:var(--white); }
-    .hamburger { display:none; flex-direction:column; gap:4px; cursor:pointer; }
-    .hamburger div { width:25px; height:3px; background:var(--text); }
-    @media(max-width:768px) { .hamburger { display:flex; } nav ul { display:none; } }
-    .mobile-menu { display:none; position:fixed; top:0; right:0; width:70%; height:100%; background:var(--secondary); padding:2rem; z-index:999; }
-    .mobile-menu.active { display:block; }
-    .mobile-menu ul { list-style:none; display:flex; flex-direction:column; gap:1rem; }
-    .hero { background:var(--primary); color:var(--white); text-align:center; padding:3rem 1rem; }
-    .hero h1 { font-size:2.5rem; margin-bottom:1rem; }
-    .hero p { font-size:1.2rem; line-height:1.6; }
-    main { flex:1; max-width:900px; margin:2rem auto; background:var(--white); padding:2rem; border-radius:8px; }
-    footer { background:#e0e0e0; padding:1rem; text-align:center; }
-    .breaking-news { position:fixed; bottom:0; width:100%; background:#191f3b; height:45px; display:flex; align-items:center; overflow:hidden; }
-    .breaking-track { display:flex; animation:scroll-right 15s linear infinite; white-space:nowrap; }
-    .breaking-item { padding:0 1.5rem; color:#fff; font-weight:700; border-left:1px solid rgba(255,255,255,0.2); }
-    @keyframes scroll-right { 0%{ transform:translateX(-100%);} 100%{ transform:translateX(100%);} }
-    @media(max-width:768px) { .breaking-item { padding:0 1rem; font-size:.9rem; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; }
+    header, section { padding: calc(var(--spacing) * 2); }
+    header { background: var(--primary-color); color: #fff; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: var(--spacing); }
+    header h2.objective { font-size: 1.4rem; font-weight: 400; margin-bottom: var(--spacing); }
+    header p { font-size: 1.1rem; }
+    .banner { display: none; background: var(--accent-color); color: #fff; padding: var(--spacing); text-align: center; font-weight: 700; }
+    nav { display: flex; justify-content: center; gap: var(--spacing); margin: var(--spacing) 0; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+
+    .grid-2, .grid-3 { display: grid; gap: var(--spacing); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+    .card { background: var(--card-bg); border-radius: var(--radius); padding: var(--spacing); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 0.5rem; color: var(--primary-color); }
+    .card ul, .card ol { margin-left: 1.2rem; margin-top: 0.5rem; }
+    .card li { margin-bottom: 0.4rem; }
+
+    h2 { margin-bottom: var(--spacing); color: var(--primary-color); text-align: center; }
+    footer { text-align: center; padding: var(--spacing); font-size: 0.9rem; color: #666; }
+    footer a { color: var(--accent-color); }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+    }
   </style>
+
+  <!-- Script pour bannière événement -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('event-banner');
+      const today = new Date();
+      const showDate = new Date('2025-06-01');
+      const endDate = new Date('2025-06-30');
+      if (today >= showDate && today <= endDate) {
+        banner.style.display = 'block';
+      }
+    });
+  </script>
 </head>
 <body>
-
-<header>
-  <div class="logo">
-    <a href="/">
-      <img src="images/icon5.png" alt="شعار moutamadres.ma">
-    </a>
+  <div id="event-banner" class="banner">
+    📅 Ressources exclusives Bac 2025 disponibles du 1er au 30 juin 2025 !
   </div>
-  <nav>
-    <ul>
-      <li><a href="/">الرئيسية</a></li>
-      <li><a href="/services">الخدمات</a></li>
-      <li><a href="/results">النتائج</a></li>
-      <li><a href="/contact">اتصل بنا</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMobileMenu()">
-      <div></div><div></div><div></div>
+
+  <header>
+    <h1>Préparez Votre Bac 2025</h1>
+    <h2 class="objective">Notre objectif : vous fournir tous les outils et conseils pour réussir brillamment votre examen.</h2>
+    <p>Guide complet : dates officielles, sujets probables, conseils & planning de révision</p>
+    <nav>
+      <a href="#dates-clefs">Dates clés</a>
+      <a href="#sujets-probables">Sujets probables</a>
+      <a href="#conseils-revision">Conseils</a>
+      <a href="#ressources">Ressources</a>
+    </nav>
+  </header>
+
+  <section id="dates-clefs">
+    <h2>📅 Dates Clés 2025</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Épreuves écrites</h3>
+        <p>Du 16 au 23 juin 2025 (général) — Du 18 au 25 juin 2025 (technologique)</p>
+      </div>
+      <div class="card">
+        <h3>Oral de rattrapage</h3>
+        <p>Du 8 au 10 juillet 2025 selon académie (consultez votre académie)</p>
+      </div>
+      <div class="card">
+        <h3>Résultats</h3>
+        <p>Publication le 3 juillet 2025 à partir de 10h (métropole)</p>
+      </div>
+      <div class="card">
+        <h3>Orientation</h3>
+        <p>Dossier Parcoursup ouvert dès le 20 janvier 2025 pour les candidats</p>
+      </div>
     </div>
-  </nav>
-</header>
+  </section>
 
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="/">الرئيسية</a></li>
-    <li><a href="/services">الخدمات</a></li>
-    <li><a href="/results">النتائج</a></li>
-    <li><a href="/contact">اتصل بنا</a></li>
-  </ul>
-</div>
+  <section id="sujets-probables">
+    <h2>🧠 Sujets Probables</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>HGGSP</h3>
+        <ul>
+          <li>Géopolitique du climat et enjeux énergétiques</li>
+          <li>Flux migratoires et réfugiés</li>
+          <li>Évolution des régimes politiques (démocraties vs autoritarismes)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Philosophie</h3>
+        <ul>
+          <li>Le bonheur comme projet de vie</li>
+          <li>Raison et passions : conflit ou harmonie ?</li>
+          <li>Paix et justice : une même quête ?</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>SES</h3>
+        <ul>
+          <li>Marché du travail et chômage structurel</li>
+          <li>Impacts de la mondialisation sur les économies nationales</li>
+          <li>Rôle des politiques publiques en période de crise</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Mathématiques</h3>
+        <ul>
+          <li>Dérivées et optimisation de fonctions</li>
+          <li>Probabilités et statistiques appliquées</li>
+          <li>Suites numériques et modélisation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Littérature</h3>
+        <ul>
+          <li>Analyse comparée de deux textes du XXe siècle</li>
+          <li>Étude d'un personnage emblématique</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Sciences</h3>
+        <ul>
+          <li>Biotechnologies et éthique</li>
+          <li>Changements climatiques et solutions innovantes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
-  <h1>moutamadres.ma</h1>
-  <p>مصدر شامل للوثائق التربوية ونتائج الامتحانات المهنية ومباريات الدخول إلى مراكز التوجيه والتخطيط.</p>
-</section>
+  <section id="conseils-revision">
+    <h2>📘 Conseils pour Réviser</h2>
+    <ol>
+      <li><strong>Planifiez</strong> votre semaine avec un tableau horaire détaillé.</li>
+      <li><strong>Alternez</strong> matières scientifiques et littéraires pour maintenir l'attention.</li>
+      <li><strong>Faites des fiches</strong> synthétiques et relisez-les quotidiennement.</li>
+      <li><strong>Entraînez-vous</strong> avec les annales officielles (B.O. & sujets corrigés).</li>
+      <li><strong>Prenez soin</strong> de votre hygiène de vie : sommeil, sport, alimentation.</li>
+      <li><strong>Travaillez</strong> en groupe pour échanger et consolider.</li>
+    </ol>
+  </section>
 
-<main>
-  <!-- المحتوى الرئيسي -->
-</main>
+  <section id="ressources">
+    <h2>🌐 Ressources Utiles</h2>
+    <ul>
+      <li><a href="https://www.education.gouv.fr/" target="_blank" rel="noopener">Ministère de l'Éducation nationale</a></li>
+      <li><a href="https://www.onisep.fr/" target="_blank" rel="noopener">ONISEP</a></li>
+      <li><a href="https://www.digischool.fr/" target="_blank" rel="noopener">DigiSchool</a></li>
+      <li><a href="https://www.reseau-canope.fr/" target="_blank" rel="noopener">Réseau Canopé</a></li>
+      <li><a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Eduscol</a></li>
+    </ul>
+  </section>
 
-<!-- Bande déroulante breaking news -->
-<div class="breaking-news">
-  <div class="breaking-track">
-    <a href="نتائج الامتحان المهني.html" class="breaking-item">📚 نتائج الامتحان المهني 2024-2025</a>
-    <a href=" مباراة مركز التوجيه والتخطيط التربوي.html" class="breaking-item">📚 مباراة مركز التوجيه والتخطيط التربوي</a>
-  </div>
-</div>
-
-<footer>
-  <p>© 2025 moutamadres.ma - جميع الحقوق محفوظة</p>
-</footer>
-
-<script>
-  function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('active');
-  }
-</script>
-
+  <footer>
+    <p>&copy; 2025 Moutamadres — Tous droits réservés | Paris, France</p>
+    <p>Développé avec ♥ pour les candidats du Bac.</p>
+  </footer>
 </body>
 </html>
