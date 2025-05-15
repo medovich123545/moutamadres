@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>edusuccess.ma – Votre partenaire de réussite scolaire</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Variables globales */
+    :root {
+      --orange: #ff7a00;
+      --blue: #2d46f2;
+      --dark: #111;
+      --gray-light: #f5f5f5;
+      --overlay: rgba(0,0,0,0.5);
+      --font-sans: 'Roboto', sans-serif;
+      --transition: 0.3s ease;
+    }
+
+    /* Reset et typographie */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--gray-light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0;
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; }
+    .logo span { color: var(--orange); }
+
+    /* Nav desktop */
+    nav.desktop { display: flex; gap: 2rem; }
+    nav.desktop a {
+      position: relative; font-weight: 500; padding: 0.5rem;
+      transition: color var(--transition);
+    }
+    nav.desktop a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--orange);
+      transition: width var(--transition);
+    }
+    nav.desktop a:hover { color: var(--orange); }
+    nav.desktop a:hover::after { width: 100%; }
+
+    .btn-connect {
+      background: var(--orange); color: #fff; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 2rem; font-weight: 600;
+      transition: filter var(--transition);
+    }
+    .btn-connect:hover { filter: brightness(0.9); }
+
+    /* Hamburger et nav mobile */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      z-index: 1100;
+    }
+    .hamburger span {
+      width: 25px; height: 3px; background: var(--dark);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    nav.mobile {
+      position: fixed; top: 0; right: 0;
+      height: 100vh; width: 80%; max-width: 300px;
+      background: #fff; flex-direction: column; padding: 4rem 1.5rem;
+      gap: 1.5rem; transform: translateX(100%);
+      transition: transform var(--transition);
+      box-shadow: -2px 0 12px rgba(0,0,0,0.1);
+      z-index: 1090;
+      display: flex;
+    }
+    nav.mobile::before {
+      content: ''; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: var(--overlay);
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition);
+      z-index: 1050;
+    }
+    nav.mobile.open {
+      transform: translateX(0);
+    }
+    nav.mobile.open::before {
+      opacity: 1; visibility: visible;
+    }
+    nav.mobile a {
+      font-size: 1.2rem; padding: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      nav.desktop { display: none; }
+      .hamburger { display: flex; }
+      .btn-connect { display: none; }
+    }
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      align-items: center; gap: 2rem; padding: 4rem 2rem; background: #fff;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
+    .hero-text .subtitle {
+      font-size: 1.1rem; color: #555; margin-bottom: 2rem;
+    }
+    .hero-text .price {
+      font-size: 1.8rem; color: var(--blue); margin-bottom: 1rem;
+    }
+    .hero-text .price small {
+      font-size: 1rem; color: #777; font-weight: 400;
+    }
+    .cta-btn {
+      background: var(--blue); color: #fff;
+      padding: 0.8rem 2rem; border-radius: 2rem; font-weight: 600;
+      display: inline-block; transition: filter var(--transition);
+    }
+    .cta-btn:hover { filter: brightness(0.9); }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Features */
+    .features {
+      padding: 4rem 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: #fff; padding: 2rem; border-radius: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #fff; padding: 2rem; text-align: center;
+      font-size: 0.9rem; color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">edu<span>success</span>.ma</div>
+    <nav class="desktop">
+      <a href="#">Accueil</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#prices">Tarifs</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+      <button class="btn-connect">Se connecter</button>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="mobile" id="mobile-nav">
+      <a href="#">Accueil</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#prices">Tarifs</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+      <button class="btn-connect">Se connecter</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Boostez vos résultats<br><span class="orange">Réussite garantie</span></h1>
+        <p class="subtitle">
+          Cours interactifs, exercices corrigés, suivi personnalisé et communauté active
+          pour chaque lycéen marocain.
+        </p>
+        <div class="price">à partir de 120 Dh <small>/ mois</small></div>
+        <a href="#" class="cta-btn">Essayer gratuitement</a>
+      </div>
+      <div class="hero-img">
+        <img src="images/Étudiants.jpg" alt="Groupe d'étudiants concentrés" />
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature-card">
+        <h3>Contenu illimité</h3>
+        <p>Accédez à des milliers de cours, fiches et vidéos 24/7 pour réviser à votre rythme.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Suivi personnalisé</h3>
+        <p>Des bilans hebdomadaires et des conseils d'experts pour maximiser vos progrès.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Communauté active</h3>
+        <p>Échangez avec des pairs et des tuteurs lors de sessions en direct et forums dédiés.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Certifications</h3>
+        <p>Obtenez des attestations validées pour valoriser votre CV et vos candidatures.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 edusuccess.ma – Tous droits réservés.
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+    // Fermer au clic sur l'overlay
+    mobileNav.addEventListener('click', e => {
+      if (e.target === mobileNav) {
+        mobileNav.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
